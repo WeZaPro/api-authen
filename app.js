@@ -1,5 +1,5 @@
 const express = require("express");
-const mongoose = require("mongoose");
+// const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const passport = require("passport");
@@ -9,7 +9,7 @@ const path = require("path");
 const config = require("./config/db");
 
 //Mongo DB config
-mongoose.set("useCreateIndex", true);
+// mongoose.set("useCreateIndex", true);
 
 //Connect to your database
 // mongoose
@@ -47,13 +47,13 @@ app.get("/", (req, res) => {
 });
 
 //create custom middleware function
-const checkUserType = function (req, res, next) {
-  const userType = req.originalUrl.split("/")[2];
-  //bring passport authentication strategy
-  require("./config/passport")(userType, passport);
-  next();
-};
-app.use(checkUserType);
+// const checkUserType = function (req, res, next) {
+//   const userType = req.originalUrl.split("/")[2];
+//   //bring passport authentication strategy
+//   require("./config/passport")(userType, passport);
+//   next();
+// };
+// app.use(checkUserType);
 
 //Bringing the user routes
 const users = require("./routes/users");
@@ -61,9 +61,9 @@ const users = require("./routes/users");
 app.use("/api/users", users);
 
 //Bringing the user routes
-const admin = require("./routes/admin");
-//specify API Admin
-app.use("/api/admin", admin);
+// const admin = require("./routes/admin");
+// //specify API Admin
+// app.use("/api/admin", admin);
 
 //To run our server
 app.listen(PORT, () => {

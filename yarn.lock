@@ -1284,7 +1284,7 @@
   "resolved" "https://registry.npmjs.org/negotiator/-/negotiator-0.6.2.tgz"
   "version" "0.6.2"
 
-"nodemon@1.19.4":
+"nodemon@^1.19.4":
   "integrity" "sha512-VGPaqQBNk193lrJFotBU8nvWZPqEZY2eIzymy2jjY0fJ9qIsxA0sxQ8ATPl0gZC645gijYEc1jtZvpS8QWzJGQ=="
   "resolved" "https://registry.npmjs.org/nodemon/-/nodemon-1.19.4.tgz"
   "version" "1.19.4"

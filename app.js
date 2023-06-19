@@ -45,6 +45,7 @@ app.get("/", (req, res) => {
     message: "This is our test for node.js authentication system",
   });
 });
+// ------
 
 //create custom middleware function
 // const checkUserType = function (req, res, next) {
